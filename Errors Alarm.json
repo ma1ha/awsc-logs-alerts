@@ -1,0 +1,22 @@
+{
+  "Type": "AWS::CloudWatch::Alarm",
+  "Properties": {
+    "AlarmName": "errors alarm",
+    "ActionsEnabled": true,
+    "OKActions": [],
+    "AlarmActions": [
+      "${SNS_ARN_ERRORS}"  
+    ],
+    "InsufficientDataActions": [],
+    "MetricName": "errors",
+    "Namespace": "errors",
+    "Statistic": "Average",
+    "Dimensions": [],
+    "Period": 300,
+    "EvaluationPeriods": 1,
+    "DatapointsToAlarm": 1,
+    "Threshold": 3,
+    "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+    "TreatMissingData": "missing"
+  }
+}
