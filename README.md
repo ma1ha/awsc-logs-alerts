@@ -74,4 +74,4 @@ These Lambda functions are triggered by CloudWatch Logs or CloudTrail events.
    
 Dashboards are set up to provide a real-time visual representation of security metrics. This includes metrics like failed login attempts and warning messages, as well as general system health.
 
-The dashboard is JSON-based and can be customized according to your requirements.
+
