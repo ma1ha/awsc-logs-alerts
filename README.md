@@ -17,7 +17,7 @@ Deploy CloudWatch Dashboards for visual monitoring of security metrics.
 
 # Project Components
 1. CloudTrail
-2. 
+   
 CloudTrail captures API activity from all services in your AWS account. We have set up a multi-region CloudTrail trail to log security-related events across the organization.
 
 Logs are stored in an S3 bucket for easy access and analysis.
@@ -56,11 +56,12 @@ failedlogs: Alert on multiple failed login attempts.
 
 warnings: Alert when there are too many warning messages in the logs.
 
-5. Lambda Functions
+4. Lambda Functions
    
 Lambda functions are used to automate the response to specific security events. The following functions are included:
 
 detect_suspicious_ips.py: Detects and logs suspicious IP addresses.
+
 
 block_ips.py: Blocks identified suspicious IPs using security groups.
 
@@ -69,7 +70,8 @@ notify_admin.py: Sends notifications to administrators via SNS for critical even
 These Lambda functions are triggered by CloudWatch Logs or CloudTrail events.
 
 
-6. CloudWatch Dashboards
+5. CloudWatch Dashboards
+   
 Dashboards are set up to provide a real-time visual representation of security metrics. This includes metrics like failed login attempts and warning messages, as well as general system health.
 
 The dashboard is JSON-based and can be customized according to your requirements.
