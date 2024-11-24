@@ -1,0 +1,55 @@
+{
+    "widgets": [
+        {
+            "height": 4,
+            "width": 12,
+            "y": 0,
+            "x": 0,
+            "type": "alarm",
+            "properties": {
+                "title": "Critical Alarms",
+                "alarms": [
+                    "arn:aws:cloudwatch:sa-east-1:619071327880:alarm:errors alarm",
+                    "arn:aws:cloudwatch:sa-east-1:619071327880:alarm:warnings"
+                ]
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 0,
+            "x": 12,
+            "type": "metric",
+            "properties": {
+                "title": "CPU Utilization",
+                "metrics": [
+                    [ "AWS/EC2", "CPUUtilization", "InstanceId", "i-0abcd1234efgh5678" ]
+                ],
+                "region": "sa-east-1",
+                "stat": "Average",
+                "period": 300,
+                "view": "timeSeries",
+                "stacked": false
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 4,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "title": "Network Traffic",
+                "metrics": [
+                    [ "AWS/EC2", "NetworkIn", "InstanceId", "i-0abcd1234efgh5678" ],
+                    [ ".", "NetworkOut", ".", "." ]
+                ],
+                "region": "sa-east-1",
+                "stat": "Sum",
+                "period": 300,
+                "view": "timeSeries",
+                "stacked": true
+            }
+        }
+    ]
+}
